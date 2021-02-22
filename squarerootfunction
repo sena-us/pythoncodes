@@ -1,0 +1,19 @@
+print("Karekök Fonksiyonu\n")
+
+def karekok(N, x0, tol=10**-10, maxiter=10):
+    iterasyon = 0
+    while True:
+        iterasyon += 1
+        x0 = (x0+(N/x0)) / 2
+        if abs(x0 ** 2 - N) < tol:
+            break
+        if iterasyon > maxiter:
+            print("İterasyon sayısı aşıldı! Hata veya maxiter değerini değiştirilerek devam edilebilir.")
+            break
+    print(x0)
+
+karekok(N=10, x0=1)
+print()
+karekok(N=10000, x0=0.1)
+print()
+karekok(N=10000, x0=0.1, maxiter=15)
