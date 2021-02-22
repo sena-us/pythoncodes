@@ -1,0 +1,13 @@
+sene = int(input("Lütfen bir yıl giriniz: "))
+
+def artikyil(sene):
+    if sene % 400 == 0:
+        return True
+    if sene % 100 == 0:
+        return False
+    if sene % 4 == 0:
+        return True
+    else:
+        return False
+
+print(artikyil(sene))
